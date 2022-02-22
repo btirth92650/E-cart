@@ -1,0 +1,19 @@
+.form-control{
+    border-radius: 5px;
+    margin-left: 80px;
+    width: 600px;
+    margin-top: 5px;
+
+}
+.search-icon{
+z-index: 10;
+position: absolute;
+right:46% !important;
+color: blue;
+margin-top: 16px !important;
+}
+.active:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    color:bisque;
+}

@@ -1,0 +1,47 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+            <a (click)="filter('')">
+                <img class="image" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+                <h6 style="text-align: center;"> All product</h6>
+            </a>
+        </div>
+
+        <div class="items">
+            <a (click)="filter('electronics')">
+                <img class="image" src="../../../assets/images/electronicsjpeg.jpeg">
+                <h6 style="text-align: center; margin-top: 3px;"> Electronics </h6>
+            </a>
+        </div>
+
+        <div class="items">
+            <a (click)="filter('fashion')">
+                <img class="image" src="../../../assets/images/fashion.jpeg">
+                <h6 style="text-align: center;"> Fashion</h6>
+            </a>
+        </div>
+
+        <div class="items">
+            <a (click)="filter('jewelery')">
+                <img class="image" src="../../../assets/images/jwellery.jpeg">
+                <h6 style="text-align: center;"> Jewllery</h6>
+
+            </a>
+        </div>  
+    </div>
+</div>
+
+<div class="container">
+    <div class="row ">
+        <ng-container *ngFor="let item of filtercategory | search:searchValue">
+            <div class="card col-md-3">
+                <img  src="{{item.image}}" alt="">
+                <h5 class="itemdata">{{item.title}} </h5>
+                <p class="itemdata">{{item.description}} </p>
+                <p><strong>price:</strong>${{item.price}} </p>
+                <p>{{item.category}} </p>
+                <button class="btn btn-primary" (click)="addToCart(item)">Add to Cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
