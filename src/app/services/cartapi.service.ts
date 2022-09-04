@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -10,7 +9,7 @@ export class CartapiService {
   cartDataList:any =[];
   productList= new BehaviorSubject<any>([ ]) ;
   search=new BehaviorSubject<string>("")
-  constructor(private http:HttpClient) { }  
+  // constructor(private http:HttpClient) { }  
 
   //get product data
   getProductData(){
@@ -34,7 +33,7 @@ export class CartapiService {
     this.cartDataList.map((a:any)=>{
     grandTotal += a.total;
     })
-    return grandTotal;
+    return grandTotal;  
   }
   // Remove cart data one by one 
   removeCartData(product:any){

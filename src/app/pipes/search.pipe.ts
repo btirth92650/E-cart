@@ -17,7 +17,7 @@ export class SearchPipe implements PipeTransform {
         product.category.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
         ) 
       }
-
+      
   }
 
 }

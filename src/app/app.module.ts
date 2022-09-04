@@ -10,6 +10,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchPipe } from './pipes/search.pipe'
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     CartComponent,
     FooterComponent,
     SearchPipe,
+    FilterPipe,
     
   ],
   imports: [

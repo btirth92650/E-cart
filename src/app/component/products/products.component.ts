@@ -8,7 +8,7 @@ import { CartapiService } from 'src/app/services/cartapi.service';
   styleUrls: ['./products.component.css']
 })
 
-
+  
 export class ProductsComponent implements OnInit {
   productList:any;
   searchValue:string="";
